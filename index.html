@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pendaftaran Volunteer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px;
+      margin-top: 15px;
+      border: none;
+      width: 100%;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Form Pendaftaran Volunteer</h2>
+  <form action="/submit" method="POST">
+    <label for="name">Nama Lengkap:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="age">Usia:</label>
+    <input type="number" id="age" name="age" required>
+
+    <label for="gender">Jenis Kelamin:</label>
+    <select id="gender" name="gender" required>
+      <option value="">-- Pilih --</option>
+      <option value="L">Laki-laki</option>
+      <option value="P">Perempuan</option>
+    </select>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="skills">Keahlian atau Minat:</label>
+    <textarea id="skills" name="skills" rows="3"></textarea>
+
+    <label for="availability">Ketersediaan Waktu:</label>
+    <select id="availability" name="availability" required>
+      <option value="">-- Pilih --</option>
+      <option value="Pagi">Pagi</option>
+      <option value="Siang">Siang</option>
+      <option value="Malam">Malam</option>
+    </select>
+
+    <button type="submit">Daftar</button>
+  </form>
+</div>
+
+</body>
+</html>
